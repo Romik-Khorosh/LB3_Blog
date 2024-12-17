@@ -54,9 +54,7 @@ public partial class BlogContext : DbContext
             entity.ToTable("users");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Birthday)
-                .HasColumnType("time with time zone")
-                .HasColumnName("birthday");
+            entity.Property(e => e.Birthday).HasColumnName("birthday");
             entity.Property(e => e.Email)
                 .HasMaxLength(300)
                 .HasColumnName("email");
